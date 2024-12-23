@@ -3,205 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <meta name="theme-color" content="#f19e36" />
+    <title>Complete Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="material/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000; 
+            color: #fff; 
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
+        #balance-container {
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .task-container {
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        .task {
+            margin: 10px auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #000000; 
+            border-radius: 12px;
+            background-color: #333030; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            width: 80%;
+        }
+
+        .task:hover {
+            transform: translateY(-5px);
+        }
+
+        .task-detail {
+            display: flex;
+            align-items: center;
+        }
+
+        .task-image img {
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        .task h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #f2f2f2;
+        }
+
+        .task-data {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .task-data img {
+            margin-right: 5px;
+        }
+
+        .task-data h5 {
+            margin: 0;
+            color: #ffcc00;
+            font-size: 18px;
+        }
+
+        .task-button {
+            background-color: #ffffff; 
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .task-button:hover {
+            background-color: #a2aaa0;
+        }
+        .tasks.scrollable {
+            max-height: 590px; 
+            overflow-y: auto; 
+            margin: 20px auto;
+            width: 90%;       
+            padding-right: 10px;
+            border: 1px solid #000000; 
+        }
+        @media (max-width: 600px) {
+            .task-container {
+                max-width: 100%;
+            }
+
+            .task-button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .task h4 {
+                font-size: 16px;
+            }
+        }
+
+
+
+        
+    </style>
 </head>
-<body class="earn">
+<body>
+   
 
-    <div class="haeder">
-        <a href="index.html">
-            <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22 11.9299H2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M8.00009 19L2.84009 14C2.5677 13.7429 2.35071 13.433 2.20239 13.0891C2.05407 12.7452 1.97754 12.3745 1.97754 12C1.97754 11.6255 2.05407 11.2548 2.20239 10.9109C2.35071 10.567 2.5677 10.2571 2.84009 10L8.00009 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-        
-    </div>
+    <div id="balance-container">
+        <h2><b>_____________</b></h2>
 
-    <div class="earn-more">
-        <img src="./assets/images/Wolf.svg" width="80px">
-        <h3>Earn more coins</h3>
-    </div>
-    <br> <br>
-
-    <div class="boosters-button">
-
-        <div class="boosters-button-detail">
-            <div class="boosters-button-image">
-                <img src="./assets/images/you.gif" width="45px">
-            </div>
-            <div>
-                <div>
-                    <h4>subscribe</h4>
-                </div>
-                <div class="boosters-button-data">
-                    <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                    <h5 class="m-r-25">2500</h5>
-                    <span class="m-r-25">•</span>
-                    
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <a href="https://x.com/wolfxfighter/status/1871329848528146521"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a>
-        </div>
-
-
-    </div>
-</div>
-<br> <br>
-<div class="boosters-button">
-
-    <div class="boosters-button-detail">
-        <div class="boosters-button-image">
-            <img src="./assets/images/1.gif" width="45px">
-        </div>
-        <div>
-            <div>
-                <h4>follow us</h4>
-            </div>
-            <div class="boosters-button-data">
-                <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                <h5 class="m-r-25">2500</h5>
-               
-              
-            </div>
-        </div>
-    </div>
-
-    <div>
-       <a href="https://x.com/wolfxfighter/status/1871329848528146521"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a> 
-    </div>
-
-
-</div>
-</div>
-<br> <br>
-<div class="boosters-button">
-
-    <div class="boosters-button-detail">
-        <div class="boosters-button-image">
-            <img src="./assets/images/2.gif" width="45px">
-        </div>
-        <div>
-            <div>
-                <h4>follow us</h4>
-            </div>
-            <div class="boosters-button-data">
-                <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                <h5 class="m-r-25">2500</h5>
-               
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <a href="https://x.com/wolfxfighter/status/1871329848528146521"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a>
-    </div>
-
-
-</div>
-</div>
-<br> <br>
-<div class="boosters-button">
-
-    <div class="boosters-button-detail">
-        <div class="boosters-button-image">
-            <img src="./assets/images/3.gif" width="45px">
-        </div>
-        <div>
-            <div>
-                <h4>follow us</h4>
-            </div>
-            <div class="boosters-button-data">
-                <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                <h5 class="m-r-25">2500</h5>
-              
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <a href="https://x.com/wolfxfighter/status/1871329848528146521"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a>
-    </div>
-
-
-</div>
-</div>
-<br> <br>
-<div class="boosters-button">
-
-    <div class="boosters-button-detail">
-        <div class="boosters-button-image">
-            <img src="./assets/images/4.gif" width="45px">
-        </div>
-        <div>
-            <div>
-                <h4>follow us</h4>
-            </div>
-            <div class="boosters-button-data">
-                <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                <h5 class="m-r-25">2500</h5>
-                
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <a href="https://x.com/wolfxfighter/status/1871329848528146521"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a>
-    </div>
-
-
-</div>
-</div>
-<br> <br>
-<div class="boosters-button">
-
-    <div class="boosters-button-detail">
-        <div class="boosters-button-image">
-            <img src="./assets/images/5.gif" width="45px">
-        </div>
-        <div>
-            <div>
-                <h4>follow us</h4>
-            </div>
-            <div class="boosters-button-data">
-                <img src="./assets/images/Wolf.svg" width="20px" class="m-r-25">
-                <h5 class="m-r-25">2500</h5>
-                
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <a href="https://x.com/wolfxfighter"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 5L14.15 10C14.4237 10.2563 14.6419 10.5659 14.791 10.9099C14.9402 11.2539 15.0171 11.625 15.0171 12C15.0171 12.375 14.9402 12.7458 14.791 13.0898C14.6419 13.4339 14.4237 13.7437 14.15 14L9 19" stroke="#ffffff" opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></a>
-    </div>
-
-
-</div>
-</div>
-
-    <div class="invite-bonus-box">
-        
-    </div>
+        <h2><b> TASKS </b></h2>
     
-    <script src="./assets/js/charge.js"></script>
+        <span id="balance">0</span>  🦴 total King
+    </div>
+    <h2><b>_______________</b></h2>
+
+    <section class="tasks scrollable">
+    <div class="task-container">
+        <div class="task">
+            <div class="task-detail">
+                <div class="task-image">
+                    <img src="material/images/you.gif" width="45px" alt="">
+                </div>
+                <div>
+                    <h4>Subscribe</h4>
+                    <div class="task-data">
+                        <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                        <h5>100</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/watch?v=_zhADvmUJe0')">🦴 claim</button>
+        </div>
+    
+        <div class="task-container">
+            <div class="task">
+                <div class="task-detail">
+                    <div class="task-image">
+                        <img src="material/images/tele.png" width="45px" alt="">
+                    </div>
+                    <div>
+                        <h4>Subscribe</h4>
+                        <div class="task-data">
+                            <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                            <h5>100</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/4rLj3TOXvGk')">🦴 claim</button>
+            </div>
+            <div class="task-container">
+                <div class="task">
+                    <div class="task-detail">
+                        <div class="task-image">
+                            <img src="material/images/fa.png" width="45px" alt="">
+                        </div>
+                        <div>
+                            <h4>follow</h4>
+                            <div class="task-data">
+                                <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                <h5>100</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                </div>
+                <div class="task-container">
+                    <div class="task">
+                        <div class="task-detail">
+                            <div class="task-image">
+                                <img src="material/images/ista.png" width="45px" alt="">
+                            </div>
+                            <div>
+                                <h4>follow</h4>
+                                <div class="task-data">
+                                    <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                    <h5>100</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                    </div>
+                    <div class="task-container">
+                        <div class="task">
+                            <div class="task-detail">
+                                <div class="task-image">
+                                    <img src="material/images/you.gif" width="45px" alt="">
+                                </div>
+                                <div>
+                                    <h4>watch video</h4>
+                                    <div class="task-data">
+                                        <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                        <h5>100</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                        </div>
+
+                        <div class="task-container">
+                            <div class="task">
+                                <div class="task-detail">
+                                    <div class="task-image">
+                                        <img src="material/images/tele.png" width="45px" alt="">
+                                    </div>
+                                    <div>
+                                        <h4>Subscribe</h4>
+                                        <div class="task-data">
+                                            <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                            <h5>100</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                            </div>
+                            <div class="task-container">
+                                <div class="task">
+                                    <div class="task-detail">
+                                        <div class="task-image">
+                                            <img src="material/images/fa.png" width="45px" alt="">
+                                        </div>
+                                        <div>
+                                            <h4>follow</h4>
+                                            <div class="task-data">
+                                                <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                                <h5>100</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                                </div>
+                                <div class="task-container">
+                                    <div class="task">
+                                        <div class="task-detail">
+                                            <div class="task-image">
+                                                <img src="material/images/ista.png" width="45px" alt="">
+                                            </div>
+                                            <div>
+                                                <h4>follow</h4>
+                                                <div class="task-data">
+                                                    <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                                    <h5>100</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                                    </div>
+                                    <div class="task-container">
+                                        <div class="task">
+                                            <div class="task-detail">
+                                                <div class="task-image">
+                                                    <img src="material/images/you.gif" width="45px" alt="">
+                                                </div>
+                                                <div>
+                                                    <h4>watch video</h4>
+                                                    <div class="task-data">
+                                                        <img src="material/images/logo.png" width="20px" alt="Coin Icon">
+                                                        <h5>100</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="task-button" onclick="completeTask(100, 'https://www.youtube.com/shorts/96B8M13L5hA')">🦴 claim</button>
+                                        </div>
+
+                    </section>
+
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>HOME</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy"></i>
+                <span>LEADERBOARD</span>
+            </a>
+            <a href="invite-friends.html" class="nav-item">
+                <i class="fas fa-user-friends"></i>
+                <span>FRIENDS</span>
+            </a>
+            <a href="task.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>TASKS</span>
+            </a>
+            <a href="balance.html" class="nav-item">
+                <i class="fas fa-wallet"></i>
+                <span>BALANCE</span>
+            </a>
+        </nav>
+
+    <script src="material/js/js.js"></script>
+    <script src="material/js/main.js"></script>
 </body>
 </html>
