@@ -1,6 +1,6 @@
 // db.php
 <?php
-$host = 'localhost';
+$host = 'https://fareed3694469.github.io/wolftapcoin/';
 $dbname = ' @Wolftapcoin_bot.';  
 $username = 'root';  
 $password = '';  
