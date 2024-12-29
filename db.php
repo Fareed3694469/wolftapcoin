@@ -1,7 +1,7 @@
 // db.php
 <?php
 $host = 'localhost';
-$dbname = 'htmlwolfcoin';  
+$dbname = ' @Wolftapcoin_bot.';  
 $username = 'root';  
 $password = '';  
 
